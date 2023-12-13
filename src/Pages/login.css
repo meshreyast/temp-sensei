@@ -1,0 +1,73 @@
+.loadingMain {
+    background-color: #001C37;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ll {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 300;
+}
+
+.ml {
+    position: absolute;
+    bottom: 42.5px;
+    right: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.tl {
+    position: absolute;
+    bottom: 117px;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.sun {
+    width: 196px;
+    height: 196px;
+    opacity: 0.8;
+    margin-top: 100px;
+}
+
+.loadingText {
+    color: #FFF;
+    font-family: Nunito Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.progessbbarMain {
+    position: absolute;
+    z-index: 400;
+    bottom: 45px;
+    width: 227px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #036;
+}
+
+.progressbarSub {
+    z-index: 500;
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #FD7702;
+}
