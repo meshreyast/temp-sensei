@@ -14,6 +14,13 @@
     align-items: center;
 }
 
+.svgcontainers {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
 .ll {
     position: absolute;
     bottom: 0;
@@ -39,10 +46,20 @@
 }
 
 .sun {
+    position: absolute;
     width: 196px;
     height: 196px;
     opacity: 0.8;
     margin-top: 100px;
+}
+
+.sunzoomin {
+    transform: scale(50%);
+}
+
+
+.logo {
+    position: absolute;
 }
 
 .loadingText {
@@ -54,7 +71,7 @@
     line-height: normal;
 }
 
-.progessbbarMain {
+.progessbarMain {
     position: absolute;
     z-index: 400;
     bottom: 45px;
