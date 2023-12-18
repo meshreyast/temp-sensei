@@ -4,12 +4,19 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-
     position: relative;
+    overflow: hidden;
 }
 
 .background {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top {
+    display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
 }
@@ -46,7 +53,6 @@
 }
 
 .sun {
-    position: absolute;
     width: 196px;
     height: 196px;
     opacity: 0.8;
@@ -54,12 +60,17 @@
 }
 
 .sunzoomin {
-    transform: scale(50%);
+    transform: scale(180%) translateY(-25%);
+    transition: transform 0.5s ease-out;
 }
 
-
 .logo {
-    position: absolute;
+    transform: scale(125%);
+}
+
+.logozoomin {
+    transform: scale(75%) translateY(-170%);
+    transition: transform 0.5s ease-out;
 }
 
 .loadingText {

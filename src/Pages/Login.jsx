@@ -27,10 +27,12 @@ const Login = () => {
 
                 <div className="top">
                     <div className="svgcontainers">
-
                         <img className={`${isLoading ? "sun" : "sunzoomin"}`} src={sun} alt="sunsubstract" />
 
-                        <img className='logo' src={mainLogo} alt="sensei logo" />
+                        <img className={`${isLoading ? "logo" : "logozoomin"}`} src={mainLogo} alt="sensei logo" />
+                    </div>
+                    <div className="maincontent">
+
                     </div>
                 </div>
                 {isLoading && <p className="loadingText">#keepasking</p>}
