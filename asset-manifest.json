@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/temp-sensei/static/css/main.cac2b981.css",
-    "main.js": "/temp-sensei/static/js/main.210d2955.js",
+    "main.css": "/temp-sensei/static/css/main.e48dc622.css",
+    "main.js": "/temp-sensei/static/js/main.7b7f1602.js",
     "static/media/top.svg": "/temp-sensei/static/media/top.e2e37d9c07a5d9c4d8690c20803d0c86.svg",
     "static/media/lower.svg": "/temp-sensei/static/media/lower.0c195bc826c9407f40712337b105a00b.svg",
     "static/media/middle.svg": "/temp-sensei/static/media/middle.405174f56f0bbdb35bb46e079826b019.svg",
     "static/media/mainlogo.svg": "/temp-sensei/static/media/mainlogo.8355463e3ec2233e2d3ae0823aa44ef1.svg",
     "static/media/sun.svg": "/temp-sensei/static/media/sun.3d288a7c0dec77f45ae1ea52e8de2bc4.svg",
     "index.html": "/temp-sensei/index.html",
-    "main.cac2b981.css.map": "/temp-sensei/static/css/main.cac2b981.css.map",
-    "main.210d2955.js.map": "/temp-sensei/static/js/main.210d2955.js.map"
+    "main.e48dc622.css.map": "/temp-sensei/static/css/main.e48dc622.css.map",
+    "main.7b7f1602.js.map": "/temp-sensei/static/js/main.7b7f1602.js.map"
   },
   "entrypoints": [
-    "static/css/main.cac2b981.css",
-    "static/js/main.210d2955.js"
+    "static/css/main.e48dc622.css",
+    "static/js/main.7b7f1602.js"
   ]
 }
