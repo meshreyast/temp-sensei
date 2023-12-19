@@ -19,13 +19,151 @@
     position: relative;
     flex-direction: column;
     align-items: center;
+    z-index: 1000;
 }
 
-.svgcontainers {
+.svgcontainer {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
+}
+
+.h {
+    height: 250px;
+}
+
+.maincontent {
+    width: 320px;
+    height: 371px;
+}
+
+.phonenum {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #FFF;
+    font-size: 16px;
+}
+
+.pnumfield {
+    width: 100%;
+    border: solid 1px #FFF;
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.otpText {
+    width: 80%;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.triangleDown {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    margin: 0 10px;
+}
+
+.numfield {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: -0.2px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ABABAB;
+}
+
+.vl {
+    padding: 15px 0;
+    border-left: 1px solid #fff;
+}
+
+.submitBTN {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 117px;
+    height: 42px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background: #FD7702;
+    margin: 2rem auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.125rem;
+}
+
+.hr {
+    border: 1px solid #ABABAB;
+    margin-bottom: 1rem;
+}
+
+.altLogin {
+    width: 223px;
+    height: 117px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.altLoginText {
+    color: #FFF;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+}
+
+.iconBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem auto;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #FFF;
+    border-radius: 50%;
+}
+
+.altLinkText {
+    color: #FFF;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.linkText {
+    color: #FD7702;
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .ll {
@@ -34,6 +172,11 @@
     right: 0;
     width: 100%;
     z-index: 300;
+}
+
+.layerszoomin {
+    transform: scale(200%);
+    transition: transform 0.5s ease-out;
 }
 
 .ml {
@@ -75,7 +218,7 @@
 
 .loadingText {
     color: #FFF;
-    font-family: Nunito Sans;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
