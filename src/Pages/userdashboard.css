@@ -1,0 +1,56 @@
+.userDashboard {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #EDE6DA 5.2%, #FFF 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContainerUser {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.welcome {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.hello {
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.28px;
+    text-transform: uppercase;
+}
+
+.avatarName {
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.96px;
+}
+
+.welcomeText {
+    width: 236px;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}

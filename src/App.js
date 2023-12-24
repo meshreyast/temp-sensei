@@ -1,9 +1,13 @@
 import Login from "./Pages/Login";
+import UserDashboard from "./Pages/UserDashboard";
+import UserProfile from "./Pages/UserProfile";
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      {/* <Login /> */}
+      {/* <UserProfile /> */}
+      <UserDashboard />
     </div>
   );
 }
