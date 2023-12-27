@@ -4,7 +4,8 @@ import Navbar from "../Components/Navbar"
 import "./userdashboard.css"
 import Subject from '../Components/Subject'
 
-import data from ".././utils"
+import { subjectData, counsellorData } from ".././utils"
+import CounsellorCard from '../Components/CounsellorCard'
 
 
 const UserDashboard = () => {
@@ -18,10 +19,15 @@ const UserDashboard = () => {
                     <p className="avatarName">Avatar name</p>
                     <p className="welcomeText">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                 </div>
-                {data.map((item, i) => (
+                {subjectData.map((item, i) => (
                     <Subject key={i} subjectName={item?.subjectName} percentage={item?.percentage} innerSubjectDivColor={item?.innerSubjectDivColor} innerBarColor={item?.innerBarColor} />
                 ))}
-
+                <div className="counsellorsDiv">
+                    <h2 className='counsellorsDivText'>Trending Counsellors</h2>
+                    {counsellorData.map((item, i) => (
+                        <CounsellorCard counsellorName={item?.counsellorName} speciality={item?.speciality} rating={item?.rating} price={item?.price} />
+                    ))}
+                </div>
             </div>
         </div>
     )

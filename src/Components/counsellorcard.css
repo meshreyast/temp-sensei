@@ -1,0 +1,97 @@
+.counsellorMainDiv {
+    width: 353px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+}
+
+.counsellorContentDiv {
+    width: 278px;
+    height: 124px;
+    padding: 17px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    background: #FFF;
+    filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.12));
+}
+
+.maskGroup {
+    position: absolute;
+    left: 0;
+    z-index: 500;
+}
+
+.counsellorInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.counsellorName {
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.64px;
+}
+
+.counsellorSpeciality {
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    /* 114.286% */
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+}
+
+.counsellorPrice {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: #FF8B13;
+    color: #FFF;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    /* 112.5% */
+    letter-spacing: -0.64px;
+}
+
+.cousellorRating {
+    width: 51px;
+    height: 51px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+}
+
+.counselloRatingText {
+    position: absolute;
+    color: #2C3D68;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -0.56px;
+    top: 19px;
+    left: 15px;
+}

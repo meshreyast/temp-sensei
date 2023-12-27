@@ -1,4 +1,4 @@
-const data = [
+export const subjectData = [
     {
         subjectName: "Mental health",
         percentage: "54%",
@@ -25,4 +25,17 @@ const data = [
     },
 ]
 
-export default data
+export const counsellorData = [
+    {
+        counsellorName: "Carter Mango",
+        speciality: "Speciality",
+        rating: 4.8,
+        price: 2350
+    },
+    {
+        counsellorName: "Haylie Dokidis",
+        speciality: "Speciality",
+        rating: 4.2,
+        price: 1850
+    }
+]
