@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/temp-sensei/static/css/main.fc6de6f3.css",
-    "main.js": "/temp-sensei/static/js/main.9ab93611.js",
+    "main.css": "/temp-sensei/static/css/main.320a06e1.css",
+    "main.js": "/temp-sensei/static/js/main.7d033939.js",
     "static/media/mentalhealthpic.svg": "/temp-sensei/static/media/mentalhealthpic.22b757b298ea949e58a06d1c9ce5bf7d.svg",
     "static/media/moralsciencepic.svg": "/temp-sensei/static/media/moralsciencepic.94fbd855346cf4042ec6f42a523821d2.svg",
     "static/media/top.svg": "/temp-sensei/static/media/top.e2e37d9c07a5d9c4d8690c20803d0c86.svg",
@@ -13,17 +13,19 @@
     "static/media/careerguidance1.svg": "/temp-sensei/static/media/careerguidance1.0f790e6d5d7eb0429c40736af0c39777.svg",
     "static/media/careerguidance2.svg": "/temp-sensei/static/media/careerguidance2.d12c5704766074e8ab984d3e03993ee2.svg",
     "static/media/studentProfPic.svg": "/temp-sensei/static/media/studentProfPic.59d0c6310944e2c1854254cc45c5b91a.svg",
+    "static/media/maskgroup1.svg": "/temp-sensei/static/media/maskgroup1.9f7854f53ba9ef5dd91d612829f668b6.svg",
     "static/media/sun.svg": "/temp-sensei/static/media/sun.3d288a7c0dec77f45ae1ea52e8de2bc4.svg",
     "static/media/icons_google.svg": "/temp-sensei/static/media/icons_google.d03fbb0f46977073e18a7c399742f2f9.svg",
+    "static/media/star2.svg": "/temp-sensei/static/media/star2.361ab522f510e3b244bf307191e73748.svg",
     "static/media/bell.svg": "/temp-sensei/static/media/bell.307e1f918a895b5a61427a261b382946.svg",
     "static/media/icons_apple.svg": "/temp-sensei/static/media/icons_apple.9d261319969cad6888e7ecdc3eecbba8.svg",
     "index.html": "/temp-sensei/index.html",
     "static/media/Rectangle 719.svg": "/temp-sensei/static/media/Rectangle 719.f0ecd7267141658d141fbeeab536f4ca.svg",
-    "main.fc6de6f3.css.map": "/temp-sensei/static/css/main.fc6de6f3.css.map",
-    "main.9ab93611.js.map": "/temp-sensei/static/js/main.9ab93611.js.map"
+    "main.320a06e1.css.map": "/temp-sensei/static/css/main.320a06e1.css.map",
+    "main.7d033939.js.map": "/temp-sensei/static/js/main.7d033939.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc6de6f3.css",
-    "static/js/main.9ab93611.js"
+    "static/css/main.320a06e1.css",
+    "static/js/main.7d033939.js"
   ]
 }
