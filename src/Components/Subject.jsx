@@ -5,6 +5,7 @@ import SexEducationPic from "../Images/sexeducationpic.svg"
 import MoralScience from "../Images/moralsciencepic.svg"
 import CareerGuidance1 from "../Images/careerguidance1.svg"
 import CareerGuidance2 from "../Images/careerguidance2.svg"
+import Activities from "./Activities"
 
 const Subject = ({ subjectName, percentage, innerSubjectDivColor, innerBarColor }) => {
 
@@ -54,6 +55,9 @@ const Subject = ({ subjectName, percentage, innerSubjectDivColor, innerBarColor 
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="activitiesDiv">
+                <Activities />
             </div>
         </>
     )
