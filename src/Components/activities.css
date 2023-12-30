@@ -1,0 +1,113 @@
+.activityDiv1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    height: 317px;
+}
+
+.activityDiv1Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 43px;
+}
+
+.activitiesDivHeading {
+    color: #333;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    /* 111.111% */
+    letter-spacing: -0.36px;
+    text-transform: uppercase;
+}
+
+.activitiesDiv1Dropdown {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.activitiesDiv1Dropdown select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../Images/dropdownarrow.svg") no-repeat right center;
+    background-position: top 15px right 12px;
+}
+
+.dropdownStyles {
+    border: none;
+    outline: none;
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+    display: inline-flex;
+    padding: 10px 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.option {
+    background: #FCD97D;
+    color: #000;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.56px;
+}
+
+.activitytopics {
+    display: flex;
+    width: 353px;
+    align-items: flex-start;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.activityDiv2 {
+    width: 100%;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.activityDiv2Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    height: 32px;
+}
+
+.scrollButtons {
+    width: 74px;
+    height: 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.rightScrollButton {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.16));
+    transform: scale(200%);
+}

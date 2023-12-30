@@ -39,3 +39,51 @@ export const counsellorData = [
         price: 1850
     }
 ]
+
+const inSchoolActivities = [
+    {
+        unit: 1.1,
+        time: "30mins",
+        topic: "Self-Identity"
+    },
+    {
+        unit: 1.2,
+        time: "30mins",
+        topic: "Strength and Challenges"
+    },
+    {
+        unit: 2.1,
+        time: "30mins",
+        topic: "My body and Emotions"
+    },
+    {
+        unit: 2.2,
+        time: "30mins",
+        topic: "Strength and Challenges"
+    }
+]
+
+const afterSchoolActivities = [
+    {
+        unit: "ASA 1",
+        time: "5mins",
+        topic: "My Favourite Things"
+    },
+    {
+        unit: "ASA 2",
+        time: "5mins",
+        topic: "My Proud Moments"
+    },
+    {
+        unit: "ASA 3",
+        time: "5mins",
+        topic: "Name and Family Tree"
+    },
+    {
+        unit: "ASA 4",
+        time: "5mins",
+        topic: "Strength and Challenges"
+    }
+]
+
+export const activityData = [inSchoolActivities, afterSchoolActivities];

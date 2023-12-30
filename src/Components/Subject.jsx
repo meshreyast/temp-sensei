@@ -6,8 +6,11 @@ import MoralScience from "../Images/moralsciencepic.svg"
 import CareerGuidance1 from "../Images/careerguidance1.svg"
 import CareerGuidance2 from "../Images/careerguidance2.svg"
 import Activities from "./Activities"
+import { useState } from "react"
 
 const Subject = ({ subjectName, percentage, innerSubjectDivColor, innerBarColor }) => {
+
+    const [show, setShow] = useState(false);
 
     const colorforinnerSubjectDiv = {
         background: innerSubjectDivColor
@@ -39,7 +42,7 @@ const Subject = ({ subjectName, percentage, innerSubjectDivColor, innerBarColor 
 
     return (
         <>
-            <div className="subjectDiv">
+            <div className="subjectDiv" onClick={() => setShow(!show)}>
                 {specificSubjectPicture.length === 2 ? (
                     <>
                         <img className='subjectPic' src={specificSubjectPicture[0]} alt={subjectName} />
@@ -56,9 +59,11 @@ const Subject = ({ subjectName, percentage, innerSubjectDivColor, innerBarColor 
                     </div>
                 </div>
             </div>
-            <div className="activitiesDiv">
-                <Activities />
-            </div>
+            {show && (
+                <div className="activitiesDiv">
+                    <Activities />
+                </div>
+            )}
         </>
     )
 }

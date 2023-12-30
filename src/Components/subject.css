@@ -70,3 +70,23 @@
     height: 16px;
     border-radius: 18.357px;
 }
+
+.activitiesDiv {
+    width: 353px;
+    height: 653px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
