@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "/temp-sensei/static/css/main.0b7cf8e1.css",
-    "main.js": "/temp-sensei/static/js/main.666d0bde.js",
+    "main.css": "/temp-sensei/static/css/main.20587eaa.css",
+    "main.js": "/temp-sensei/static/js/main.411416aa.js",
+    "static/media/selfIdentity.jpeg": "/temp-sensei/static/media/selfIdentity.8d8e1d732e40d988eac1.jpeg",
     "static/media/mentalhealthpic.svg": "/temp-sensei/static/media/mentalhealthpic.22b757b298ea949e58a06d1c9ce5bf7d.svg",
+    "static/media/strengthsAndChallenges2.jpeg": "/temp-sensei/static/media/strengthsAndChallenges2.1010b019e7967ac16561.jpeg",
+    "static/media/strengthsAndChallenges.jpeg": "/temp-sensei/static/media/strengthsAndChallenges.fe958e25b46a9a851bc3.jpeg",
+    "static/media/myFavouriteThings.jpeg": "/temp-sensei/static/media/myFavouriteThings.98959618004c9289c764.jpeg",
+    "static/media/myBodyAndEmotions.jpeg": "/temp-sensei/static/media/myBodyAndEmotions.421340f03fe43141f848.jpeg",
+    "static/media/myProudMoments.jpeg": "/temp-sensei/static/media/myProudMoments.237b0a2a841862ae9b9d.jpeg",
     "static/media/moralsciencepic.svg": "/temp-sensei/static/media/moralsciencepic.94fbd855346cf4042ec6f42a523821d2.svg",
     "static/media/top.svg": "/temp-sensei/static/media/top.e2e37d9c07a5d9c4d8690c20803d0c86.svg",
     "static/media/lower.svg": "/temp-sensei/static/media/lower.0c195bc826c9407f40712337b105a00b.svg",
@@ -15,17 +21,20 @@
     "static/media/studentProfPic.svg": "/temp-sensei/static/media/studentProfPic.59d0c6310944e2c1854254cc45c5b91a.svg",
     "static/media/maskgroup1.svg": "/temp-sensei/static/media/maskgroup1.9f7854f53ba9ef5dd91d612829f668b6.svg",
     "static/media/sun.svg": "/temp-sensei/static/media/sun.3d288a7c0dec77f45ae1ea52e8de2bc4.svg",
+    "static/media/rightScroll.svg": "/temp-sensei/static/media/rightScroll.ad8828dc1af8c9e183ff6fdf8830e65a.svg",
     "static/media/icons_google.svg": "/temp-sensei/static/media/icons_google.d03fbb0f46977073e18a7c399742f2f9.svg",
     "static/media/star2.svg": "/temp-sensei/static/media/star2.361ab522f510e3b244bf307191e73748.svg",
     "static/media/bell.svg": "/temp-sensei/static/media/bell.307e1f918a895b5a61427a261b382946.svg",
     "static/media/icons_apple.svg": "/temp-sensei/static/media/icons_apple.9d261319969cad6888e7ecdc3eecbba8.svg",
     "index.html": "/temp-sensei/index.html",
+    "static/media/leftScroll.svg": "/temp-sensei/static/media/leftScroll.c4085313a8d7a9d0c9a84343589c5811.svg",
+    "static/media/dropdownarrow.svg": "/temp-sensei/static/media/dropdownarrow.c96519c2185f53f0c2c8.svg",
     "static/media/Rectangle 719.svg": "/temp-sensei/static/media/Rectangle 719.f0ecd7267141658d141fbeeab536f4ca.svg",
-    "main.0b7cf8e1.css.map": "/temp-sensei/static/css/main.0b7cf8e1.css.map",
-    "main.666d0bde.js.map": "/temp-sensei/static/js/main.666d0bde.js.map"
+    "main.20587eaa.css.map": "/temp-sensei/static/css/main.20587eaa.css.map",
+    "main.411416aa.js.map": "/temp-sensei/static/js/main.411416aa.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b7cf8e1.css",
-    "static/js/main.666d0bde.js"
+    "static/css/main.20587eaa.css",
+    "static/js/main.411416aa.js"
   ]
 }
