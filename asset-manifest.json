@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/temp-sensei/static/css/main.20587eaa.css",
-    "main.js": "/temp-sensei/static/js/main.411416aa.js",
+    "main.css": "/temp-sensei/static/css/main.eea5af6c.css",
+    "main.js": "/temp-sensei/static/js/main.f1f683b4.js",
     "static/media/selfIdentity.jpeg": "/temp-sensei/static/media/selfIdentity.8d8e1d732e40d988eac1.jpeg",
     "static/media/mentalhealthpic.svg": "/temp-sensei/static/media/mentalhealthpic.22b757b298ea949e58a06d1c9ce5bf7d.svg",
     "static/media/strengthsAndChallenges2.jpeg": "/temp-sensei/static/media/strengthsAndChallenges2.1010b019e7967ac16561.jpeg",
@@ -23,18 +23,20 @@
     "static/media/sun.svg": "/temp-sensei/static/media/sun.3d288a7c0dec77f45ae1ea52e8de2bc4.svg",
     "static/media/rightScroll.svg": "/temp-sensei/static/media/rightScroll.ad8828dc1af8c9e183ff6fdf8830e65a.svg",
     "static/media/icons_google.svg": "/temp-sensei/static/media/icons_google.d03fbb0f46977073e18a7c399742f2f9.svg",
+    "static/media/profileParentIcon.svg": "/temp-sensei/static/media/profileParentIcon.c6ada9c06a633cc0377c83b0a90e7b47.svg",
     "static/media/star2.svg": "/temp-sensei/static/media/star2.361ab522f510e3b244bf307191e73748.svg",
+    "static/media/editicon.svg": "/temp-sensei/static/media/editicon.b030f3edb4104ebfa25bdba9e7064509.svg",
     "static/media/bell.svg": "/temp-sensei/static/media/bell.307e1f918a895b5a61427a261b382946.svg",
     "static/media/icons_apple.svg": "/temp-sensei/static/media/icons_apple.9d261319969cad6888e7ecdc3eecbba8.svg",
     "index.html": "/temp-sensei/index.html",
     "static/media/leftScroll.svg": "/temp-sensei/static/media/leftScroll.c4085313a8d7a9d0c9a84343589c5811.svg",
     "static/media/dropdownarrow.svg": "/temp-sensei/static/media/dropdownarrow.c96519c2185f53f0c2c8.svg",
     "static/media/Rectangle 719.svg": "/temp-sensei/static/media/Rectangle 719.f0ecd7267141658d141fbeeab536f4ca.svg",
-    "main.20587eaa.css.map": "/temp-sensei/static/css/main.20587eaa.css.map",
-    "main.411416aa.js.map": "/temp-sensei/static/js/main.411416aa.js.map"
+    "main.eea5af6c.css.map": "/temp-sensei/static/css/main.eea5af6c.css.map",
+    "main.f1f683b4.js.map": "/temp-sensei/static/js/main.f1f683b4.js.map"
   },
   "entrypoints": [
-    "static/css/main.20587eaa.css",
-    "static/js/main.411416aa.js"
+    "static/css/main.eea5af6c.css",
+    "static/js/main.f1f683b4.js"
   ]
 }
