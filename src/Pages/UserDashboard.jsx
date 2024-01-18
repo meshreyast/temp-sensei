@@ -6,6 +6,7 @@ import Subject from '../Components/Subject'
 
 import { subjectData, counsellorData } from ".././utils"
 import CounsellorCard from '../Components/CounsellorCard'
+import { Link } from 'react-router-dom'
 
 
 const UserDashboard = () => {
@@ -16,7 +17,9 @@ const UserDashboard = () => {
             <div className="mainContainerUser">
                 <div className="welcome">
                     <p className='hello'>Hello!</p>
-                    <p className="avatarName">Avatar name</p>
+                    <Link style={{ textDecoration: "none" }} to="/temp-sensei">
+                        <p className="avatarName">Avatar name</p>
+                    </Link>
                     <p className="welcomeText">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
                 </div>
                 {subjectData.map((item, i) => (
