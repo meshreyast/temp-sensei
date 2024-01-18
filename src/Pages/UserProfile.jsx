@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-import Editicon from '../Components/Editicon'
+import EditIcon from '../Components/Editicon'
 import StudentProfileCard from '../Components/StudentProfileCard'
 import "./userprofile.css"
 
@@ -24,7 +24,7 @@ const UserProfile = () => {
                         <img src={ParentProfileIcon} alt="Parent Profile icon" />
                         <p className='parentName'>Parent Full Name</p>
                     </div>
-                    <Editicon placeAtTop={true} />
+                    <EditIcon placeAtTop={true} />
                     <div className="parentInfoDiv">
                         <div className="parentInfoDiv1">
                             <div className="infoUp">
