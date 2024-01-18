@@ -17,7 +17,7 @@ const Login = () => {
     const [phoneNumber, setPhoneNumber] = useState();
 
     useEffect(() => {
-        setTimeout(() => setIsLoading(false), 3000)
+        setTimeout(() => setIsLoading(false), 1000)
     }, [])
 
 

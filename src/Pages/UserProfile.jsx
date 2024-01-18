@@ -1,9 +1,11 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
+import Editicon from '../Components/Editicon'
+import StudentProfileCard from '../Components/StudentProfileCard'
 import "./userprofile.css"
 
 import ParentProfileIcon from "../Images/profileParentIcon.svg"
-import EditIcon from "../Images/editicon.svg"
+import BranchLines from "../Images/branchlines.svg"
 
 const UserProfile = () => {
     return (
@@ -15,9 +17,7 @@ const UserProfile = () => {
                         <img src={ParentProfileIcon} alt="Parent Profile icon" />
                         <p className='parentName'>Parent Full Name</p>
                     </div>
-                    <div className="editicon">
-                        <img src={EditIcon} alt="editicon" />
-                    </div>
+                    <Editicon placeAtTop={true} />
                     <div className="parentInfoDiv">
                         <div className="parentInfoDiv1">
                             <div className="infoUp">
@@ -36,6 +36,14 @@ const UserProfile = () => {
                             <p className="contactInfoPhNumber">91XXXXX45XX</p>
                         </div>
                     </div>
+                    <img className='branchLines' src={BranchLines} alt="branchlines" />
+                </div>
+                <div className="studentProfileContainer">
+                    <StudentProfileCard grade={"02"} />
+                    <StudentProfileCard grade={"04"} />
+                </div>
+                <div className="logoutButton">
+                    <p className="btnText">Logout</p>
                 </div>
             </div>
         </div>

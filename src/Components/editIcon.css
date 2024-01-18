@@ -1,0 +1,21 @@
+.editIcon {
+    background-color: #F8BF3B;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.atTop {
+    top: 20px;
+    right: 20px;
+}
+
+.atBottom {
+    right: 10px;
+    bottom: 10px;
+}

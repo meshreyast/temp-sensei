@@ -3,7 +3,7 @@ import "./navbar.css"
 
 import mainLogo from "../Images/mainlogo.svg"
 import studentProfPic from "../Images/studentProfPic.svg"
-import Rectangle from "../Images/Rectangle 719.svg"
+import NavbarRectangle from "../Images/Rectangle 719.svg"
 import Bell from "../Images/bell.svg"
 
 
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <div className="panelBlock">
                     <div className="userInfo">
                         <div className="studentIdInfo">
-                            <img className='studentIdSlate' src={Rectangle} alt="slate" />
+                            <img className='studentIdSlate' src={NavbarRectangle} alt="slate" />
                             <p className="studentIdText">#sensei_Stu_Id</p>
                         </div>
                         <img className='profPic' src={studentProfPic} alt="profilepicture" />

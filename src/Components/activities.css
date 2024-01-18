@@ -42,6 +42,7 @@
 }
 
 .dropdownStyles {
+    width: 100px;
     border: none;
     outline: none;
     color: #000;
