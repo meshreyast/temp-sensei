@@ -7,7 +7,7 @@ import lowerLayerSVG from "../Images/lower.svg"
 import middleLayerSVG from "../Images/middle.svg"
 import topLayerSVG from "../Images/top.svg"
 import indiaFlag from "../Images/emojione_flag-for-india.svg"
-import googleIcon from "../Images/icons_google.svg";
+import googleIcon from "../Images/icons_google.svg"
 import appleIcon from "../Images/icons_apple.svg"
 
 const Login = () => {
@@ -15,6 +15,17 @@ const Login = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const [phoneNumber, setPhoneNumber] = useState();
+
+
+    const handleSubmit = async (e) => {
+        if (phoneNumber.length < 10) {
+            alert("Please Enter a Valid Phone Number");
+        } else {
+            e.preventDefault();
+            localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber));
+            window.location.assign('/temp-sensei')
+        }
+    }
 
     useEffect(() => {
         setTimeout(() => setIsLoading(false), 1000)
@@ -50,7 +61,11 @@ const Login = () => {
                                     placeholder='Enter number' />
                             </div>
                             <p className="otpText">A 4 digit OTP will be sent to verify your mobile number.</p>
-                            <button className='submitBTN' type="submit">Get OTP</button>
+                            <button className='submitBTN'
+                                type='submit'
+                                onClick={handleSubmit} >
+                                Get OTP
+                            </button>
                             <div className="hr"></div>
                             <div className="altLogin">
                                 <p className='altLoginText'>Or Sign in with</p>

@@ -8,6 +8,18 @@ import Bell from "../Images/bell.svg"
 
 
 const Navbar = () => {
+
+    let idName;
+
+    if (window.location.pathname === "/temp-sensei/userdashboard") {
+        idName = "Student 1 name"
+    } else {
+        idName = "#sensei_Stu_Id";
+    }
+
+    console.log(idName, window.location.pathname)
+
+
     return (
         <div className='navbar'>
             <div className="mainContainer">
@@ -18,7 +30,7 @@ const Navbar = () => {
                     <div className="userInfo">
                         <div className="studentIdInfo">
                             <img className='studentIdSlate' src={NavbarRectangle} alt="slate" />
-                            <p className="studentIdText">#sensei_Stu_Id</p>
+                            <p className="studentIdText">{idName}</p>
                         </div>
                         <img className='profPic' src={studentProfPic} alt="profilepicture" />
                     </div>
@@ -28,7 +40,6 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

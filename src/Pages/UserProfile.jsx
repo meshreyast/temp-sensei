@@ -8,6 +8,13 @@ import ParentProfileIcon from "../Images/profileParentIcon.svg"
 import BranchLines from "../Images/branchlines.svg"
 
 const UserProfile = () => {
+
+    const deleteUser = async () => {
+        localStorage.clear();
+        window.location.assign('/temp-sensei/login')
+    }
+
+
     return (
         <div className='userProfile'>
             <Navbar />
@@ -43,7 +50,7 @@ const UserProfile = () => {
                     <StudentProfileCard grade={"04"} />
                 </div>
                 <div className="logoutButton">
-                    <p className="btnText">Logout</p>
+                    <p className="btnText" onClick={deleteUser}>Logout</p>
                 </div>
             </div>
         </div>

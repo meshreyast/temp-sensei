@@ -5,13 +5,16 @@ import UserDashboard from "./Pages/UserDashboard";
 import UserProfile from "./Pages/UserProfile";
 
 function App() {
+
+  const phoneNumber = localStorage.getItem("userPhoneNumber");
+
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/temp-sensei/" element={<UserProfile />} />
-          <Route path="/temp-sensei/login" element={<Login />} />
-          <Route path="/temp-sensei/userdashboard" element={<UserDashboard />} />
+          <Route path="/temp-sensei" element={phoneNumber ? <UserProfile /> : <Login />} />
+          <Route path="/temp-sensei/login" element={phoneNumber ? <UserProfile /> : <Login />} />
+          <Route path="/temp-sensei/userdashboard" element={phoneNumber ? <UserDashboard /> : <Login />} />
         </Routes>
       </BrowserRouter>
     </div>

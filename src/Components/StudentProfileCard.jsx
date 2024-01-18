@@ -6,8 +6,13 @@ import StudentImageIcon from "../Images/studentimageicon.svg"
 import Editicon from './Editicon'
 
 const StudentProfileCard = ({ grade }) => {
+
+    const toDashboard = async () => {
+        window.location.assign('/temp-sensei/userdashboard')
+    }
+
     return (
-        <div className='studentProfileCard'>
+        <div className='studentProfileCard' onClick={toDashboard}>
             <div className="studentIdRectangleDiv">
                 <img src={StudentReactangle} alt="studentReactangle" />
                 <p className='IDText'>#sensei_Stu_Id</p>
