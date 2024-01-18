@@ -18,7 +18,7 @@ const Login = () => {
 
 
     const handleSubmit = async (e) => {
-        if (phoneNumber.length < 10) {
+        if (!phoneNumber || phoneNumber.length < 10) {
             alert("Please Enter a Valid Phone Number");
         } else {
             e.preventDefault();
