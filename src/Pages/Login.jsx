@@ -25,7 +25,7 @@ const Login = () => {
         } else {
             e.preventDefault();
             localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber));
-            navigate("/temp-sensei/userprofile")
+            navigate("/temp-sensei")
         }
     }
 

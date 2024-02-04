@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/temp-sensei/userprofile" element={phoneNumber ? <UserProfile /> : <Login />} />
+          <Route path="/temp-sensei" element={phoneNumber ? <UserProfile /> : <Login />} />
           <Route path="/temp-sensei/login" element={phoneNumber ? <UserProfile /> : <Login />} />
           <Route path="/temp-sensei/userdashboard" element={phoneNumber ? <UserDashboard /> : <Login />} />
         </Routes>
