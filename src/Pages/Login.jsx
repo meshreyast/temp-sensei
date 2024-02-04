@@ -9,12 +9,14 @@ import topLayerSVG from "../Images/top.svg"
 import indiaFlag from "../Images/emojione_flag-for-india.svg"
 import googleIcon from "../Images/icons_google.svg"
 import appleIcon from "../Images/icons_apple.svg"
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const [isLoading, setIsLoading] = useState(true);
 
     const [phoneNumber, setPhoneNumber] = useState();
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (e) => {
@@ -23,7 +25,7 @@ const Login = () => {
         } else {
             e.preventDefault();
             localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber));
-            window.location.assign('/temp-sensei')
+            navigate("/temp-sensei/userprofile")
         }
     }
 

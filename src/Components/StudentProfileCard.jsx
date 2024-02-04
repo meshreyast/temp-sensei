@@ -4,11 +4,14 @@ import "./studentProfileCard.css"
 import StudentReactangle from "../Images/studentrectangle.svg"
 import StudentImageIcon from "../Images/studentimageicon.svg"
 import Editicon from './Editicon'
+import { useNavigate } from 'react-router-dom'
 
 const StudentProfileCard = ({ grade }) => {
 
+    const navigate = useNavigate()
+
     const toDashboard = async () => {
-        window.location.assign('/temp-sensei/userdashboard')
+        navigate("/temp-sensei/userdashboard")
     }
 
     return (

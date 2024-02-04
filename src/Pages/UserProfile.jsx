@@ -6,12 +6,15 @@ import "./userprofile.css"
 
 import ParentProfileIcon from "../Images/profileParentIcon.svg"
 import BranchLines from "../Images/branchlines.svg"
+import { useNavigate } from 'react-router-dom'
 
 const UserProfile = () => {
 
+    const navigate = useNavigate();
+
     const deleteUser = async () => {
         localStorage.clear();
-        window.location.assign('/temp-sensei/login')
+        navigate("/temp-sensei/login")
     }
 
 
