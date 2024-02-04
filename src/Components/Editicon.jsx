@@ -4,8 +4,6 @@ import "./editIcon.css"
 
 const Editicon = ({ placeAtTop }) => {
 
-    console.log(placeAtTop)
-
     return (
         <div><div className={`editIcon ${placeAtTop ? "atTop" : "atBottom"}`}>
             <img src={EditIcon} alt="editicon" />

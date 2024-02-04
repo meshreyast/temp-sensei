@@ -17,8 +17,6 @@ const Navbar = () => {
         idName = "#sensei_Stu_Id";
     }
 
-    console.log(idName, window.location.pathname)
-
 
     return (
         <div className='navbar'>

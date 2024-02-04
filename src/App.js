@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
         <Routes>
           <Route path="/temp-sensei" element={phoneNumber ? <UserProfile /> : <Login />} />
           <Route path="/temp-sensei/login" element={phoneNumber ? <UserProfile /> : <Login />} />
