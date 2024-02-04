@@ -10,17 +10,12 @@ import { useNavigate } from 'react-router-dom'
 
 const UserProfile = () => {
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const deleteUser = async () => {
-        localStorage.clear();
+        localStorage.clear()
+        navigate("/temp-sensei")
     }
-
-    const phoneNumber = localStorage.getItem("userPhoneNumber");
-    if (!phoneNumber) {
-        navigate("/temp-sensei/login")
-    }
-
 
 
     return (

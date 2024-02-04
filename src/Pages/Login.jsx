@@ -16,7 +16,8 @@ const Login = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     const [phoneNumber, setPhoneNumber] = useState();
-    const navigate = useNavigate();
+
+    const navigate = useNavigate()
 
 
     const handleSubmit = async (e) => {
@@ -24,7 +25,7 @@ const Login = () => {
             alert("Please Enter a Valid Phone Number");
         } else {
             e.preventDefault();
-            localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber));
+            localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber))
             navigate("/temp-sensei")
         }
     }
