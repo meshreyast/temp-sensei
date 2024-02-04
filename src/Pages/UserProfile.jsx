@@ -14,8 +14,13 @@ const UserProfile = () => {
 
     const deleteUser = async () => {
         localStorage.clear();
+    }
+
+    const phoneNumber = localStorage.getItem("userPhoneNumber");
+    if (!phoneNumber) {
         navigate("/temp-sensei/login")
     }
+
 
 
     return (
