@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 import "./login.css";
 
 import mainLogo from "../Images/mainlogo.svg"
@@ -9,31 +12,37 @@ import topLayerSVG from "../Images/top.svg"
 import indiaFlag from "../Images/emojione_flag-for-india.svg"
 import googleIcon from "../Images/icons_google.svg"
 import appleIcon from "../Images/icons_apple.svg"
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     const [isLoading, setIsLoading] = useState(true);
-
-    const [phoneNumber, setPhoneNumber] = useState();
-
-    const navigate = useNavigate()
-
-
-    const handleSubmit = async (e) => {
-        if (!phoneNumber || phoneNumber.length < 10) {
-            alert("Please Enter a Valid Phone Number");
-        } else {
-            e.preventDefault();
-            localStorage.setItem("userPhoneNumber", JSON.stringify(phoneNumber))
-            navigate("/temp-sensei")
-        }
-    }
+    const [data, setData] = useState();
+    const [phoneNum, setPhoneNum] = useState("");
 
     useEffect(() => {
         setTimeout(() => setIsLoading(false), 1000)
-    }, [])
+    }, []);
 
+    const navigate = useNavigate()
+
+    const handleSubmit = async (e) => {
+        if (!phoneNum) {
+            alert("Please Enter a Valid Phone Number");
+        } else if (phoneNum.length === 10 && phoneNum === data?.phone) {
+            try {
+                e.preventDefault();
+                const res = await axios.get(`https://sensei-app-c8da1e59e645.herokuapp.com/sensei/api/v1/details/parent/${phoneNum}`)
+                console.log("data", res?.data)
+                setData(res?.data)
+                localStorage.setItem("userPhoneNumber", JSON.stringify(data?.phone))
+                navigate(`/temp-sensei/user/${phoneNum}`)
+            } catch (error) {
+                console.log(error.messege)
+            }
+        } else if (phoneNum !== data?.phone) {
+            alert("User doesn't exist");
+        }
+    }
 
     return (
         <div className='loadingMain'>
@@ -60,7 +69,8 @@ const Login = () => {
                                 <input type="tel"
                                     name='phonenumber'
                                     className='numfield'
-                                    onChange={(e) => setPhoneNumber(e.target.value)}
+                                    value={phoneNum}
+                                    onChange={e => setPhoneNum(e.target.value)}
                                     placeholder='Enter number' />
                             </div>
                             <p className="otpText">A 4 digit OTP will be sent to verify your mobile number.</p>

@@ -6,10 +6,14 @@ import Subject from '../Components/Subject'
 
 import { subjectData, counsellorData } from ".././utils"
 import CounsellorCard from '../Components/CounsellorCard'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
 const UserDashboard = () => {
+    const location = useLocation();
+    const { pathname } = location;
+
+    let address = `/temp-sensei/user/${pathname.split("/")[3]}`         //Corection needed
 
     return (
         <div className='userDashboard'>
@@ -17,7 +21,7 @@ const UserDashboard = () => {
             <div className="mainContainerUser">
                 <div className="welcome">
                     <p className='hello'>Hello!</p>
-                    <Link style={{ textDecoration: "none" }} to="/temp-sensei">
+                    <Link style={{ textDecoration: "none" }} to={address}>
                         <p className="avatarName">Avatar name</p>
                     </Link>
                     <p className="welcomeText">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>

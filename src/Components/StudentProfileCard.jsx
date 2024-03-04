@@ -6,12 +6,12 @@ import StudentImageIcon from "../Images/studentimageicon.svg"
 import Editicon from './Editicon'
 import { useNavigate } from 'react-router-dom'
 
-const StudentProfileCard = ({ grade }) => {
+const StudentProfileCard = ({ child }) => {
 
     const navigate = useNavigate()
 
     const toDashboard = async () => {
-        navigate("/temp-sensei/userdashboard")
+        navigate(`/temp-sensei/user/${child?.childName}/userdashboard`)
     }
 
     return (
@@ -27,16 +27,16 @@ const StudentProfileCard = ({ grade }) => {
             <div className="studentProfileInfo">
                 <div className="namesDiv">
                     <p className="avatarName">Avatar Name</p>
-                    <p className="stuFullName">Student Full name</p>
+                    <p className="stuFullName">{child?.childName ? child?.childName : "Child name"}</p>
                 </div>
                 <div className="schoolInfo">
                     <div className="row">
                         <p className="tagName">Grade</p>
-                        <p className="tagInfo">{grade}</p>
+                        <p className="tagInfo">{child?.grade}</p>
                     </div>
                     <div className="row">
                         <p className="tagName">School</p>
-                        <p className="tagInfo">Dhruv Internationals School</p>
+                        <p className="tagInfo">{child?.schoolId}</p>
                     </div>
                 </div>
             </div>
