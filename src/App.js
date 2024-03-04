@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path={`/temp-sensei/user/:phonenum`} element={<UserProfile />} />
           <Route path="/temp-sensei/login" element={<Login />} />
+          <Route path={`/temp-sensei/user/:phonenum`} element={<UserProfile />} />
           <Route path="/temp-sensei/user/:child/userdashboard" element={<UserDashboard />} />
         </Routes>
       </BrowserRouter>
