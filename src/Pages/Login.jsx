@@ -28,19 +28,20 @@ const Login = () => {
     const handleSubmit = async (e) => {
         if (!phoneNum) {
             alert("Please Enter a Valid Phone Number");
-        } else if (phoneNum.length === 10 && phoneNum === data?.phone) {
+        } else if (phoneNum.length === 10) {
             try {
                 e.preventDefault();
                 const res = await axios.get(`https://sensei-app-c8da1e59e645.herokuapp.com/sensei/api/v1/details/parent/${phoneNum}`)
-                console.log("data", res?.data)
-                setData(res?.data)
-                localStorage.setItem("userPhoneNumber", JSON.stringify(data?.phone))
-                navigate(`/temp-sensei/user/${phoneNum}`)
+                if (phoneNum === res?.data?.phone) {
+                    setData(res?.data)
+                    localStorage.setItem("userPhoneNumber", JSON.stringify(data?.phone))
+                    navigate(`/temp-sensei/user/${phoneNum}`)
+                } else {
+                    alert("User doesn't exist");
+                }
             } catch (error) {
                 console.log(error.messege)
             }
-        } else if (phoneNum !== data?.phone) {
-            alert("User doesn't exist");
         }
     }
 
