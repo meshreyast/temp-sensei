@@ -22,12 +22,14 @@ const Login = () => {
     const parentData = Data?.data;
     const dispatch = useDispatch();
 
+    const [isLoading, setIsLoading] = useState(false);
+
+    // console.log("All data", Data, "ParentData", parentData)
+
     useEffect(() => {
+        setIsLoading(false)
         dispatch(fetchParentsRequest({ phoneNum }))
     }, [dispatch, phoneNum])
-
-    console.log("Parent slice data", parentData, "Loading", Data.isLoading)
-
 
     const navigate = useNavigate()
 
@@ -37,9 +39,9 @@ const Login = () => {
             alert("Please Enter a Valid Phone Number");
         } else if (phoneNum.length === 10 && phoneNum === parentData?.phone) {
             localStorage.setItem("userPhoneNumber", JSON.stringify(parentData?.phone))
-            navigate(`/temp-sensei/user/${phoneNum}`)
+            navigate(`/temp-sensei/user/${parentData.name}`)
         } else {
-            alert("User doesn't exist");
+            alert(`User doesn't exist ${Data.error}`);
         }
     }
 
@@ -47,18 +49,18 @@ const Login = () => {
         <div className='loadingMain'>
             <div className="background">
                 <div className="layers">
-                    <img className={`ll ${Data?.isLoading ? "" : "layerszoomin"}`} src={lowerLayerSVG} alt="lower" />
-                    <img className={`ml ${Data?.isLoading ? "" : "layerszoomin"}`} src={middleLayerSVG} alt="middle" />
-                    <img className={`tl ${Data?.isLoading ? "" : "layerszoomin"}`} src={topLayerSVG} alt="top" />
+                    <img className={`ll ${isLoading ? "" : "layerszoomin"}`} src={lowerLayerSVG} alt="lower" />
+                    <img className={`ml ${isLoading ? "" : "layerszoomin"}`} src={middleLayerSVG} alt="middle" />
+                    <img className={`tl ${isLoading ? "" : "layerszoomin"}`} src={topLayerSVG} alt="top" />
                 </div>
 
                 <div className="top">
-                    <div className={`svgcontainer ${Data?.isLoading ? "" : "h"}`}>
-                        <img className={`${Data?.isLoading ? "sun" : "sunzoomin"}`} src={sun} alt="sunsubstract" />
+                    <div className={`svgcontainer ${isLoading ? "" : "h"}`}>
+                        <img className={`${isLoading ? "sun" : "sunzoomin"}`} src={sun} alt="sunsubstract" />
 
-                        <img className={`${Data?.isLoading ? "logo" : "logozoomin"}`} src={mainLogo} alt="sensei logo" />
+                        <img className={`${isLoading ? "logo" : "logozoomin"}`} src={mainLogo} alt="sensei logo" />
                     </div>
-                    {!Data?.isLoading && (
+                    {!isLoading && (
                         <div className="maincontent">
                             <p className='phonenum'>Phone number</p>
                             <div className="pnumfield">
@@ -95,9 +97,9 @@ const Login = () => {
                     )}
 
                 </div>
-                {Data?.isLoading && <p className="loadingText">#keepasking</p>}
+                {isLoading && <p className="loadingText">#keepasking</p>}
                 {
-                    Data?.isLoading &&
+                    isLoading &&
                     <div className="progessbarMain">
                         <div className="progressbarSub"></div>
                     </div>

@@ -1,5 +1,5 @@
 import { all } from "redux-saga/effects";
-import watchAsyncData from "./parentSaga";
+import watchAsyncData from "./fetchersSaga";
 
 export function* rootSaga() {
     yield all([watchAsyncData()])

@@ -13,7 +13,7 @@ const UserDashboard = () => {
     const location = useLocation();
     const { pathname } = location;
 
-    let address = `/temp-sensei/user/${pathname.split("/")[3]}`         //Corection needed
+    let address = `/temp-sensei/user/${pathname.split("/")[3]}`;
 
     return (
         <div className='userDashboard'>

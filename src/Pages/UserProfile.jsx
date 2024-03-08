@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../Components/Navbar'
 import EditIcon from '../Components/Editicon'
 import StudentProfileCard from '../Components/StudentProfileCard'
@@ -6,37 +6,21 @@ import "./userprofile.css"
 
 import ParentProfileIcon from "../Images/profileParentIcon.svg"
 import BranchLines from "../Images/branchlines.svg"
-import { useLocation, useNavigate } from 'react-router-dom'
-import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchChildrenRequest } from '../Redux/slice/childrenSlice'
 
 const UserProfile = () => {
 
-    const [parentData, setParentData] = useState();
-    const [childData, setChildData] = useState([]);
+    const parentData = useSelector(state => state?.parents?.data)
+    const childData = useSelector(state => state?.children?.data)
+    const dispatch = useDispatch();
 
-    const location = useLocation();
-    const { pathname } = location;
-
-
-    const getAPIData = async () => {
-        try {
-            const parent = await axios.get(`https://sensei-app-c8da1e59e645.herokuapp.com/sensei/api/v1/details/parent/${pathname.split("/")[3]}`)
-            const child = await axios.get(`https://sensei-app-c8da1e59e645.herokuapp.com/sensei/api/v1/details/children/${parent?.data?.id}`)
-            axios.all([parent, child]).then(
-                axios.spread((...allData) => {
-                    setParentData(allData[0]?.data)
-                    setChildData(allData[1]?.data)
-                })
-            )
-        }
-        catch (error) {
-            console.log(error.message);
-        }
-    }
+    const id = parentData?.id;
 
     useEffect(() => {
-        getAPIData();
-    }, []);
+        dispatch(fetchChildrenRequest({ id }))
+    }, [dispatch, id])
 
     let occupation;
     let kids = childData.length;
