@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 
 import "./login.css";
 
@@ -12,36 +11,35 @@ import topLayerSVG from "../Images/top.svg"
 import indiaFlag from "../Images/emojione_flag-for-india.svg"
 import googleIcon from "../Images/icons_google.svg"
 import appleIcon from "../Images/icons_apple.svg"
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchParentsRequest } from '../Redux/slice/parentSlice';
 
 const Login = () => {
 
-    const [isLoading, setIsLoading] = useState(true);
-    const [data, setData] = useState();
     const [phoneNum, setPhoneNum] = useState("");
 
+    const Data = useSelector(state => state?.parents);
+    const parentData = Data?.data;
+    const dispatch = useDispatch();
+
     useEffect(() => {
-        setTimeout(() => setIsLoading(false), 1000)
-    }, []);
+        dispatch(fetchParentsRequest({ phoneNum }))
+    }, [dispatch, phoneNum])
+
+    console.log("Parent slice data", parentData, "Loading", Data.isLoading)
+
 
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        if (!phoneNum) {
+        e.preventDefault();
+        if (!phoneNum || phoneNum.length !== 10) {
             alert("Please Enter a Valid Phone Number");
-        } else if (phoneNum.length === 10) {
-            try {
-                e.preventDefault();
-                const res = await axios.get(`https://sensei-app-c8da1e59e645.herokuapp.com/sensei/api/v1/details/parent/${phoneNum}`)
-                if (phoneNum === res?.data?.phone) {
-                    setData(res?.data)
-                    localStorage.setItem("userPhoneNumber", JSON.stringify(data?.phone))
-                    navigate(`/temp-sensei/user/${phoneNum}`)
-                } else {
-                    alert("User doesn't exist");
-                }
-            } catch (error) {
-                console.log(error.messege)
-            }
+        } else if (phoneNum.length === 10 && phoneNum === parentData?.phone) {
+            localStorage.setItem("userPhoneNumber", JSON.stringify(parentData?.phone))
+            navigate(`/temp-sensei/user/${phoneNum}`)
+        } else {
+            alert("User doesn't exist");
         }
     }
 
@@ -49,18 +47,18 @@ const Login = () => {
         <div className='loadingMain'>
             <div className="background">
                 <div className="layers">
-                    <img className={`ll ${isLoading ? "" : "layerszoomin"}`} src={lowerLayerSVG} alt="lower" />
-                    <img className={`ml ${isLoading ? "" : "layerszoomin"}`} src={middleLayerSVG} alt="middle" />
-                    <img className={`tl ${isLoading ? "" : "layerszoomin"}`} src={topLayerSVG} alt="top" />
+                    <img className={`ll ${Data?.isLoading ? "" : "layerszoomin"}`} src={lowerLayerSVG} alt="lower" />
+                    <img className={`ml ${Data?.isLoading ? "" : "layerszoomin"}`} src={middleLayerSVG} alt="middle" />
+                    <img className={`tl ${Data?.isLoading ? "" : "layerszoomin"}`} src={topLayerSVG} alt="top" />
                 </div>
 
                 <div className="top">
-                    <div className={`svgcontainer ${isLoading ? "" : "h"}`}>
-                        <img className={`${isLoading ? "sun" : "sunzoomin"}`} src={sun} alt="sunsubstract" />
+                    <div className={`svgcontainer ${Data?.isLoading ? "" : "h"}`}>
+                        <img className={`${Data?.isLoading ? "sun" : "sunzoomin"}`} src={sun} alt="sunsubstract" />
 
-                        <img className={`${isLoading ? "logo" : "logozoomin"}`} src={mainLogo} alt="sensei logo" />
+                        <img className={`${Data?.isLoading ? "logo" : "logozoomin"}`} src={mainLogo} alt="sensei logo" />
                     </div>
-                    {!isLoading && (
+                    {!Data?.isLoading && (
                         <div className="maincontent">
                             <p className='phonenum'>Phone number</p>
                             <div className="pnumfield">
@@ -97,9 +95,9 @@ const Login = () => {
                     )}
 
                 </div>
-                {isLoading && <p className="loadingText">#keepasking</p>}
+                {Data?.isLoading && <p className="loadingText">#keepasking</p>}
                 {
-                    isLoading &&
+                    Data?.isLoading &&
                     <div className="progessbarMain">
                         <div className="progressbarSub"></div>
                     </div>
@@ -110,3 +108,4 @@ const Login = () => {
 }
 
 export default Login
+
