@@ -36,7 +36,6 @@ const Login = () => {
         if (!phoneNum || phoneNum.length !== 10) {
             alert("Please Enter a Valid Phone Number");
         } else if (phoneNum.length === 10 && phoneNum === parentData?.phone) {
-            localStorage.setItem("userPhoneNumber", JSON.stringify(parentData?.phone))
             navigate(`/user/${parentData.name}`)
         } else {
             alert(`User doesn't exist`);

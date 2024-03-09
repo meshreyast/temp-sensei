@@ -3,12 +3,12 @@ import createSagaMiddleware from 'redux-saga'
 import rootReducer from "./slice/rootReducer";
 import { rootSaga } from "./sagas";
 
-import storage from "redux-persist/lib/storage";
+import storage from 'redux-persist-indexeddb-storage';
 import { persistReducer, persistStore } from "redux-persist";
 
 const persistConfig = {
     key: 'root',
-    storage
+    storage: storage('myDB')
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

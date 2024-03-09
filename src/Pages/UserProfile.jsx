@@ -34,7 +34,6 @@ const UserProfile = () => {
     const navigate = useNavigate()
 
     const deleteUser = async () => {
-        localStorage.removeItem("userPhoneNumber");
         navigate("/login")
     }
 
