@@ -34,8 +34,8 @@ const UserProfile = () => {
     const navigate = useNavigate()
 
     const deleteUser = async () => {
-        localStorage.clear()
-        navigate("/temp-sensei/login")
+        localStorage.removeItem("userPhoneNumber");
+        navigate("/login")
     }
 
 

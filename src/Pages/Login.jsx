@@ -24,8 +24,6 @@ const Login = () => {
 
     const [isLoading, setIsLoading] = useState(true);
 
-    // console.log("All data", Data, "ParentData", parentData)
-
     useEffect(() => {
         setIsLoading(false)
         dispatch(fetchParentsRequest({ phoneNum }))
@@ -39,7 +37,7 @@ const Login = () => {
             alert("Please Enter a Valid Phone Number");
         } else if (phoneNum.length === 10 && phoneNum === parentData?.phone) {
             localStorage.setItem("userPhoneNumber", JSON.stringify(parentData?.phone))
-            navigate(`/temp-sensei/user/${parentData.name}`)
+            navigate(`/user/${parentData.name}`)
         } else {
             alert(`User doesn't exist`);
         }

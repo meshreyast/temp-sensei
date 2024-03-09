@@ -9,7 +9,7 @@ const PrivateRoutes = () => {
     }
 
     return (
-        auth.token ? <Outlet /> : <Navigate to="/temp-sensei/login" />
+        auth.token ? <Outlet /> : <Navigate to="/login" />
     )
 }
 
