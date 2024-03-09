@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/temp-sensei/static/css/main.5ac6951d.css",
-    "main.js": "/temp-sensei/static/js/main.22a65caa.js",
+    "main.js": "/temp-sensei/static/js/main.f6ce98df.js",
     "static/media/selfIdentity.jpeg": "/temp-sensei/static/media/selfIdentity.8d8e1d732e40d988eac1.jpeg",
     "static/media/mentalhealthpic.svg": "/temp-sensei/static/media/mentalhealthpic.22b757b298ea949e58a06d1c9ce5bf7d.svg",
     "static/media/strengthsAndChallenges2.jpeg": "/temp-sensei/static/media/strengthsAndChallenges2.1010b019e7967ac16561.jpeg",
@@ -36,10 +36,10 @@
     "static/media/Rectangle 719.svg": "/temp-sensei/static/media/Rectangle 719.f0ecd7267141658d141fbeeab536f4ca.svg",
     "static/media/studentrectangle.svg": "/temp-sensei/static/media/studentrectangle.66e681b5a1711812e2106f936ac8f39b.svg",
     "main.5ac6951d.css.map": "/temp-sensei/static/css/main.5ac6951d.css.map",
-    "main.22a65caa.js.map": "/temp-sensei/static/js/main.22a65caa.js.map"
+    "main.f6ce98df.js.map": "/temp-sensei/static/js/main.f6ce98df.js.map"
   },
   "entrypoints": [
     "static/css/main.5ac6951d.css",
-    "static/js/main.22a65caa.js"
+    "static/js/main.f6ce98df.js"
   ]
 }
