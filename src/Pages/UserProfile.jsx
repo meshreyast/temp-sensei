@@ -70,9 +70,9 @@ const UserProfile = () => {
                     <img className='branchLines' src={BranchLines} alt="branchlines" />
                 </div>
                 <div className="studentProfileContainer">
-                    {childData.map((child, idx) => {
+                    {childData.map((child, id) => {
                         return (
-                            <StudentProfileCard key={idx} child={child} />
+                            <StudentProfileCard key={id} child={child} />
                         )
                     })}
                 </div>

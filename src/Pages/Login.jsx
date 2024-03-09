@@ -22,7 +22,7 @@ const Login = () => {
     const parentData = Data?.data;
     const dispatch = useDispatch();
 
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     // console.log("All data", Data, "ParentData", parentData)
 
@@ -41,7 +41,7 @@ const Login = () => {
             localStorage.setItem("userPhoneNumber", JSON.stringify(parentData?.phone))
             navigate(`/temp-sensei/user/${parentData.name}`)
         } else {
-            alert(`User doesn't exist ${Data.error}`);
+            alert(`User doesn't exist`);
         }
     }
 

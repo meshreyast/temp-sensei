@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Pages/Login";
 import UserDashboard from "./Pages/UserDashboard";
 import UserProfile from "./Pages/UserProfile";
+import PrivateRoutes from "./Components/PrivateRoutes";
 
 function App() {
 
@@ -11,8 +12,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/temp-sensei/login" element={<Login />} />
-          <Route path="/temp-sensei/user/:phonenum" element={<UserProfile />} />
-          <Route path="/temp-sensei/user/:child/userdashboard" element={<UserDashboard />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/temp-sensei/user/:name" element={<UserProfile />} />
+            <Route path="/temp-sensei/user/:child/userdashboard" element={<UserDashboard />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

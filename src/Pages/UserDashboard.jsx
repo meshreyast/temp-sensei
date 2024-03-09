@@ -6,14 +6,13 @@ import Subject from '../Components/Subject'
 
 import { subjectData, counsellorData } from ".././utils"
 import CounsellorCard from '../Components/CounsellorCard'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 const UserDashboard = () => {
-    const location = useLocation();
-    const { pathname } = location;
-
-    let address = `/temp-sensei/user/${pathname.split("/")[3]}`;
+    const parentData = useSelector(state => state?.parents?.data)
+    let address = `/temp-sensei/user/${parentData?.name}`;
 
     return (
         <div className='userDashboard'>
