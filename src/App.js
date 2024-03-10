@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 
 import Login from "./Pages/Login";
 import UserDashboard from "./Pages/UserDashboard";
@@ -8,19 +14,32 @@ import Home from "./Pages/Home";
 
 function App() {
 
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/login",
+  //     element: <Login />,
+  //   },
+  //   {
+  //     path: "/user/:name",
+  //     element: <UserProfile />,
+  //   },
+  //   {
+  //     path: "/user/:child/userdashboard",
+  //     element: <UserDashboard />,
+  //   },
+  // ]);
+
   return (
     <div className="App">
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
           <Route element={<PrivateRoutes />}>
-            <Route path="/temp-sensei/user/:name" element={<UserProfile />} />
-            <Route path="/temp-sensei/user/:child/userdashboard" element={<UserDashboard />} />
+            <Route path="/user/:name" element={<UserProfile />} />
+            <Route path="/user/:child/userdashboard" element={<UserDashboard />} />
           </Route>
         </Routes>
-      </BrowserRouter> */}
-      <h1>Homepage</h1>
+      </BrowserRouter>
     </div>
   );
 }

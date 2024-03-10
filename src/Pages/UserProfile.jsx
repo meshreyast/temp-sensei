@@ -38,7 +38,7 @@ const UserProfile = () => {
     const deleteUser = async () => {
         dispatch(resetChildren())
         dispatch(resetParents())
-        navigate("/temp-sensei/login")
+        navigate("/")
     }
 
 
