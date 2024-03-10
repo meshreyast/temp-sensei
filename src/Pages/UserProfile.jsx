@@ -5,10 +5,12 @@ import StudentProfileCard from '../Components/StudentProfileCard'
 import "./userprofile.css"
 
 import ParentProfileIcon from "../Images/profileParentIcon.svg"
-import BranchLines from "../Images/branchlines.svg"
-import { useNavigate } from 'react-router-dom'
-import { useSelector, useDispatch } from 'react-redux'
-import { fetchChildrenRequest } from '../Redux/slice/childrenSlice'
+import BranchLines from "../Images/branchlines.svg";
+
+import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchChildrenRequest, resetChildren } from '../Redux/slice/childrenSlice';
+import { resetParents } from '../Redux/slice/parentSlice'
 
 const UserProfile = () => {
 
@@ -34,7 +36,9 @@ const UserProfile = () => {
     const navigate = useNavigate()
 
     const deleteUser = async () => {
-        navigate("/login")
+        dispatch(resetChildren())
+        dispatch(resetParents())
+        navigate("/temp-sensei/login")
     }
 
 

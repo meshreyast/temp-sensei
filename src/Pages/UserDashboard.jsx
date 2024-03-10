@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux'
 
 const UserDashboard = () => {
     const parentData = useSelector(state => state?.parents?.data)
-    let address = `/user/${parentData?.name}`;
+    let address = `/temp-sensei/user/${parentData?.name}`;
 
     return (
         <div className='userDashboard'>

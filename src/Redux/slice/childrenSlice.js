@@ -1,11 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+    data: [],
+    error: null,
+}
+
 const childrenSlice = createSlice({
     name: "childrenData",
-    initialState: {
-        data: [],
-        error: null,
-    },
+    initialState,
     reducers: {
         fetchChildrenRequest(state) {
             state.error = null;
@@ -16,8 +18,11 @@ const childrenSlice = createSlice({
         fetchChildrenFailure(state, action) {
             state.error = action.payload;
         },
+        resetChildren(state) {
+            state.data = [];
+        },
     }
 })
 
-export const { fetchChildrenRequest, fetchChildrenSuccess, fetchChildrenFailure } = childrenSlice.actions;
+export const { fetchChildrenRequest, fetchChildrenSuccess, fetchChildrenFailure, resetChildren } = childrenSlice.actions;
 export default childrenSlice.reducer;

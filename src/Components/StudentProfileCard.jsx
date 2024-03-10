@@ -11,7 +11,7 @@ const StudentProfileCard = ({ child }) => {
     const navigate = useNavigate()
 
     const toDashboard = async () => {
-        navigate(`/user/${child?.childName}/userdashboard`)
+        navigate(`/temp-sensei/user/${child?.childName}/userdashboard`)
     }
 
     return (
