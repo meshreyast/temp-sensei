@@ -25,8 +25,8 @@ const Login = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(false)
         dispatch(fetchParentsRequest({ phoneNum }))
+        setIsLoading(false)
     }, [dispatch, phoneNum])
 
     const navigate = useNavigate()
