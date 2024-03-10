@@ -10,16 +10,17 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/temp-sensei/user/:name" element={<UserProfile />} />
             <Route path="/temp-sensei/user/:child/userdashboard" element={<UserDashboard />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <h1>Homepage</h1>
     </div>
   );
 }
