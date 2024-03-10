@@ -11,6 +11,9 @@ import UserDashboard from "./Pages/UserDashboard";
 import UserProfile from "./Pages/UserProfile";
 import PrivateRoutes from "./Components/PrivateRoutes";
 import Home from "./Pages/Home";
+import { PersistGate } from "redux-persist/lib/integration/react";
+import { Provider } from "react-redux";
+import store, { persistor } from "./Redux/store";
 
 function App() {
 
@@ -32,13 +35,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route element={<PrivateRoutes />}>
-            <Route path="/user/:name" element={<UserProfile />} />
-            <Route path="/user/:child/userdashboard" element={<UserDashboard />} />
-          </Route>
-        </Routes>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route element={<PrivateRoutes />}>
+                <Route path="/user/:name" element={<UserProfile />} />
+                <Route path="/user/:child/userdashboard" element={<UserDashboard />} />
+              </Route>
+            </Routes>
+          </PersistGate>
+        </Provider>
       </BrowserRouter>
     </div>
   );
